@@ -9,6 +9,6 @@
     "http-proxy-middleware": "^2.0.6"
   },
   "scripts": {
-    "dev": "node api/index.js"
+    "dev": "node index.js"
   }
 }

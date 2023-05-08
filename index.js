@@ -4,6 +4,10 @@ require("dotenv").config();
 
 const app = express();
 
+app.use("/health", (req, res) => {
+  res.status(200).json("API PROXY ONLINE");
+});
+
 app.use(
   "/",
   createProxyMiddleware({
@@ -16,3 +20,5 @@ app.use(
 app.listen(3001, () => {
   console.log("Proxy server is running on port 3001");
 });
+
+module.exports = app;
